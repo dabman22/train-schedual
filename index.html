@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Employee Data Management</title>
+    <!-- linking bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <!-- Linking style Sheet -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron" style="background-color:#000" font="color: #fff">
+            <h1>Employee Data Management</h1>
+            <h2>A Comprehensive Directory of Employee Billable Hours</h2>
+        </div>
+        <!-- current train schedule container -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2> Current Employees</h2>
+                    <table class="table">
+                        <!-- table head -->
+                        <thead>
+                            <tr>
+                                <th>Employee Name</th>
+                                <th>Role</th>
+                                <th>Start Date</th>
+                                <th>Months Worked</th>
+                                <th>Monthly Rate ($)</th>
+                                <th>Total Billed($)</th>
+                            </tr>
+                        </thead>
+                        <!-- table body -->
+                        <tbody id="emplData">
+                            <tr>
+                                <td>Full Name</td>
+                                <td>Role</td>
+                                <td>Start Date</td>
+                                <td>Months Worked</td>
+                                <td>Montly Rate</td>
+                                <td>Total Billed</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- current train schedule container end -->
+                <!-- add train container -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!-- form to add new train -->
+                            <h2> Add Employee</h2>
+                            <form id="train-form" size="100%">
+                                <label for="name-input" id="label">Employee name: </label>
+                                <input type="text" id="name-input" class="form-control" size="100%">
+                                <br>
+                                <label for="role-input" id="label">Role: </label>
+                                <input type="text" id="role-input" class="form-control">
+                                <br>
+                                <label for="time-input" id="label">Start Date: </label>
+                                <input type="text" id="time-input" class="form-control">
+                                <br>
+                                <label for="rate-input" id="label">Monthly Rate: </label>
+                                <input type="text" id="rate-input" class="form-control">
+                                <!-- Button triggers new train to be added -->
+                                <!-- <br>
+                        <button id="Submit" type="submit" class="btn btn-primary" value = "Submit">Submit</button>
+                </div> -->
+                                <br>
+                                <button id="submit-btn" type="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- add train container end -->
+                <!-- Firebase Reference -->
+                <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+                <!-- linking jquery -->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                <!-- linking javascript -->
+                <script src="timesheet.js"></script>
+           
+</body>
+</html>
